@@ -1,5 +1,7 @@
 ### XlsxRead PHP Extension
 
+[![Build Status](https://travis-ci.org/viest/php-ext-xlsxread.svg?branch=master)](https://travis-ci.org/viest/php-ext-xlsxread)
+
 #### Install
 
 ```bash
