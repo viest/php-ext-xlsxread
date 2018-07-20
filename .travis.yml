@@ -16,7 +16,7 @@ notifications:
   email: wjx@php.net
 
 before_script:
-  - sudo apt-get install libexpat1-dev -y
+  - sudo apt-get install libexpat1-dev libzip-dev -y
   - phpize && ./configure && make clean && make
 
 branches:
