@@ -13,7 +13,7 @@ php:
   - 7.2
 
 notifications:
-  email: dev@service.viest.me
+  email: wjx@php.net
 
 before_script:
   - sudo apt-get install libexpat1-dev -y
