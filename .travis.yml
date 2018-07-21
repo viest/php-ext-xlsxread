@@ -16,7 +16,10 @@ notifications:
   email: wjx@php.net
 
 before_script:
-  - sudo apt-get install libexpat1-dev libzip-dev -y
+  - sudo apt-get install libexpat1-dev -y
+  - git clone https://github.com/nih-at/libzip.git
+  - cd libzip && git checkout rel-1-5-1
+  - cmake && make && make install && cd ..s
   - phpize && ./configure && make clean && make
 
 branches:
