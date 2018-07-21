@@ -26,7 +26,7 @@ before_script:
   - sudo env "PATH=$PATH" make
   - sudo env "PATH=$PATH" make install
   - cd ../../
-  - phpize && ./configure && make clean && make
+  - phpize && ./configure && sudo env "PATH=$PATH" make clean && make
 
 branches:
   only:
