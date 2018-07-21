@@ -19,7 +19,7 @@ before_script:
   - sudo apt-get install libexpat1-dev -y
   - wget https://github.com/nih-at/libzip/archive/rel-1-5-1.tar.gz
   - tar -zxvf rel-1-5-1.tar.gz
-  - cd libzip-rel-1-5-1 && midir build && cd build
+  - cd libzip-rel-1-5-1 && mkdir build && cd build
   - cmake ..
   - make
   - make install
