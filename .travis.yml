@@ -22,7 +22,7 @@ before_script:
   - cd libzip-rel-1-5-1 && mkdir build && cd build
   - cmake ..
   - make
-  - make install
+  - sudo make install
   - cd ../../
   - phpize && ./configure && make clean && make
 
