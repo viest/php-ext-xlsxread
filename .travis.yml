@@ -23,8 +23,8 @@ before_script:
   - tar -zxvf rel-1-5-1.tar.gz
   - cd libzip-rel-1-5-1 && mkdir build && cd build
   - sudo env "PATH=$PATH" cmake ..
-  - make
-  - sudo make install
+  - sudo env "PATH=$PATH" make
+  - sudo env "PATH=$PATH" make install
   - cd ../../
   - phpize && ./configure && make clean && make
 
