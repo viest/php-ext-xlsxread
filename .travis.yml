@@ -19,7 +19,7 @@ before_script:
   - sudo apt-get install libexpat1-dev -y
   - git clone https://github.com/nih-at/libzip.git
   - cd libzip && git checkout rel-1-5-1
-  - cmake && make && make install && cd ..
+  - cmake . && make && make install && cd ..
   - phpize && ./configure && make clean && make
 
 branches:
