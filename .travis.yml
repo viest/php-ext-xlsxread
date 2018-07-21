@@ -17,10 +17,13 @@ notifications:
 
 before_script:
   - sudo apt-get install libexpat1-dev -y
-  - mkdir libzip_build && cd libzip_build && mkdir build
-  - git clone https://github.com/nih-at/libzip.git && git checkout rel-1-5-1
-  - cd build && cmake ..
-  - make && make install && cd ../../
+  - wget https://github.com/nih-at/libzip/archive/rel-1-5-1.tar.gz
+  - tar -zxvf rel-1-5-1.tar.gz
+  - cd libzip-rel-1-5-1 && midir build && cd build
+  - cmake ..
+  - make
+  - make install
+  - cd ../../
   - phpize && ./configure && make clean && make
 
 branches:
