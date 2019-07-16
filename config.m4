@@ -1,6 +1,9 @@
 PHP_ARG_WITH(xlsxread, for xlsxread support,
 [  --with-xlsxread             Include xlsxread support])
 
+PHP_ARG_WITH(libexpat, system libexpat,
+[  --with-libexpat=DIR Use system library], no, no)
+
 if test "$PHP_XLSXREAD" != "no"; then
     xlsxread_sources="xlsxread.c \
     src/file.c \
@@ -13,7 +16,7 @@ if test "$PHP_XLSXREAD" != "no"; then
 
     AC_MSG_CHECKING([Check libexpat support])
 
-    for i in /usr/local /usr; do
+    for i in $PHP_LIBEXPAT /usr/local /usr; do
         if test -r $i/include/expat.h; then
             AC_MSG_CHECKING([Check libexpat library])
             EXPAT_DIR=$i
