@@ -25,7 +25,7 @@ if test "$PHP_XLSXREAD" != "no"; then
             [
                 PHP_ADD_LIBRARY_WITH_PATH(expat, $i/$PHP_LIBDIR, XLSXREAD_SHARED_LIBADD)
             ],[
-                AC_MSG_ERROR([Wrong libexpat version or library not found])
+                AC_MSG_WARN([Wrong libexpat version or library not found])
             ],[
                 -L$i/$PHP_LIBDIR -lm
             ])
@@ -47,7 +47,7 @@ if test "$PHP_XLSXREAD" != "no"; then
             [
                 PHP_ADD_LIBRARY_WITH_PATH(zip, $i/$PHP_LIBDIR, XLSXREAD_SHARED_LIBADD)
             ],[
-                AC_MSG_ERROR([Wrong libzip version or library not found])
+                AC_MSG_WARN([Wrong libzip version or library not found])
             ],[
                 -L$i/$PHP_LIBDIR -lm
             ])
